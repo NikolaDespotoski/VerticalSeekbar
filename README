@@ -1,5 +1,5 @@
 This sample illustrates implementation of VerticalSeekbar in Android Platform. The basis of the VerticalSeekbar is the Seekbar view from Android SDK. 
 
-I reworked what some guy(s) started. He's solution wasn't brilliant.
+I reworked what some guy(s) started (a credit goes to him). He's solution wasn't brilliant.
 http://stackoverflow.com/questions/4892179/need-working-vertical-seekbar
 

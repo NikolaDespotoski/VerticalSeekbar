@@ -23,12 +23,13 @@ public class VerticalSeekbarActivity extends Activity implements OnSeekBarChange
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View tMain = getInflater().inflate(R.layout.main, null);
-        LinearLayout main = (LinearLayout)tMain;
         
-        LinearLayout tempLayout = new LinearLayout(this);
-        tempLayout.setOrientation(LinearLayout.HORIZONTAL);
         LayoutInflater inflater = getInflater();
+        View tMain =inflater.inflate(R.layout.main, null);
+        LinearLayout main = (LinearLayout)tMain;        
+        LinearLayout tempLayout = new LinearLayout(this);
+        tempLayout.setOrientation(LinearLayout.HORIZONTAL); 
+        
         for(int i = 1; i <=5; i++)
         {   RelativeLayout vSeekbarLayout = (RelativeLayout)inflater.inflate(R.layout.vertical_seekbar_layout, null);
         	VerticalSeekbar vBar = (VerticalSeekbar)vSeekbarLayout.findViewById(R.id.bar);
@@ -40,6 +41,7 @@ public class VerticalSeekbarActivity extends Activity implements OnSeekBarChange
         	tempLayout.addView(vSeekbarLayout, params);
         	vBars.add(vBar);
         }
+        
         main.addView(tempLayout);
         setContentView(main);
         final Button b = (Button)main.findViewById(R.id.btn);
